@@ -43,7 +43,7 @@ func (api *ApiRequest) Join(meetingID string, userName string, moderator bool) (
 		password = m.AttendeePW
 	}
 
-	params := []params{
+	Params := []Params{
 		{
 			name:  FULL_NAME,
 			value: userName,
@@ -63,7 +63,7 @@ func (api *ApiRequest) Join(meetingID string, userName string, moderator bool) (
 	}
 
 	var response responseJoin
-	err = api.makeRequest(&response, JOIN, params...)
+	err = api.makeRequest(&response, JOIN, Params...)
 	if err != nil {
 		return "", nil, "", "", "", "", err
 	}
