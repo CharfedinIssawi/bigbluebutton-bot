@@ -121,9 +121,9 @@ type Params struct {
 	Value string
 }
 
-func (api *ApiRequest) buildParams(params ...params) string {
+func (api *ApiRequest) buildParams(Params ...Params) string {
 	var param string
-	for count, p := range params {
+	for count, p := range Params {
 
 		//Replace special chars
 		name := url.QueryEscape(string(p.name))
