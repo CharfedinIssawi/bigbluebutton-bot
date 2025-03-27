@@ -8,12 +8,12 @@ import (
 	"strconv"
 	"time"
 
-	api "github.com/bigbluebutton-bot/bigbluebutton-bot/api"
-	"github.com/bigbluebutton-bot/bigbluebutton-bot/pad"
+	api "github.com/CharfedinIssawi/bigbluebutton-bot/api"
+	"github.com/CharfedinIssawi/bigbluebutton-bot/pad"
 
-	bot "github.com/bigbluebutton-bot/bigbluebutton-bot"
+	bot "github.com/CharfedinIssawi/bigbluebutton-bot"
 
-	bbb "github.com/bigbluebutton-bot/bigbluebutton-bot/bbb"
+	bbb "github.com/CharfedinIssawi/bigbluebutton-bot/bbb"
 
 	"github.com/pion/rtp"
 	"github.com/pion/webrtc/v3"
