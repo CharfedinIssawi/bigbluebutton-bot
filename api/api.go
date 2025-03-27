@@ -116,9 +116,9 @@ const (
 	MODERATOR_ONLY_MESSAGE     paramname = "moderatorOnlyMessage"
 )
 
-type params struct {
-	name  paramname
-	value string
+type Params struct {
+	Name  ParamName
+	Value string
 }
 
 func (api *ApiRequest) buildParams(params ...params) string {
@@ -178,7 +178,7 @@ func (api *ApiRequest) generateChecksumSHA1(action action, params string) string
 //     Message     string   `xml:"message"`
 // }
 
-type responseerror struct {
+type Responseerror struct {
 	Key     string `xml:"key"`
 	Message string `xml:"message"`
 }
