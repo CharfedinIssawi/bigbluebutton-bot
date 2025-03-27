@@ -1,4 +1,4 @@
-module github.com/bigbluebutton-bot/bigbluebutton-bot
+module github.com/CharfedinIssawi/bigbluebutton-bot
 
 go 1.20
 
