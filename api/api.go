@@ -85,35 +85,35 @@ const (
 )
 
 // Only those parames are allowed
-type paramname string
+type ParamName string
 
 const (
-	MEETING_ID                 paramname = "meetingID"
-	RECORD_ID                  paramname = "recordID"
-	NAME                       paramname = "name"
-	ATTENDEE_PW                paramname = "attendeePW"
-	MODERATOR_PW               paramname = "moderatorPW"
-	PASSWORD                   paramname = "password" //same as moderatorPW (I dont know why its sometimse called password and not moderatorPW)
-	FULL_NAME                  paramname = "fullName"
-	WELCOME                    paramname = "welcome"
-	VOICE_BRIDGE               paramname = "voiceBridge"
-	RECORD                     paramname = "record"
-	AUTO_START_RECORDING       paramname = "autoStartRecording"
-	ALLOW_START_STOP_RECORDING paramname = "allowStartStopRecording"
-	DIAL_NUMBER                paramname = "dialNumber"
-	WEB_VOICE                  paramname = "webVoice"
-	LOGOUT_URL                 paramname = "logoutURL"
-	MAX_PARTICIPANTS           paramname = "maxParticipants"
-	DURATION                   paramname = "duration"
-	USER_ID                    paramname = "userID"
-	CREATE_TIME                paramname = "createTime"
-	WEB_VOICE_CONF             paramname = "webVoiceConf"
-	PUBLISH                    paramname = "publish"
-	REDIRECT                   paramname = "redirect"
-	CLIENT_URL                 paramname = "clientURL"
-	CONFIG_TOKEN               paramname = "configToken"
-	AVATAR_URL                 paramname = "avatarURL"
-	MODERATOR_ONLY_MESSAGE     paramname = "moderatorOnlyMessage"
+	MEETING_ID                 ParamName = "meetingID"
+	RECORD_ID                  ParamName = "recordID"
+	NAME                       ParamName = "name"
+	ATTENDEE_PW                ParamName = "attendeePW"
+	MODERATOR_PW               ParamName = "moderatorPW"
+	PASSWORD                   ParamName = "password" //same as moderatorPW (I dont know why its sometimse called password and not moderatorPW)
+	FULL_NAME                  ParamName = "fullName"
+	WELCOME                    ParamName = "welcome"
+	VOICE_BRIDGE               ParamName = "voiceBridge"
+	RECORD                     ParamName = "record"
+	AUTO_START_RECORDING       ParamName = "autoStartRecording"
+	ALLOW_START_STOP_RECORDING ParamName = "allowStartStopRecording"
+	DIAL_NUMBER                ParamName = "dialNumber"
+	WEB_VOICE                  ParamName = "webVoice"
+	LOGOUT_URL                 ParamName = "logoutURL"
+	MAX_PARTICIPANTS           ParamName = "maxParticipants"
+	DURATION                   ParamName = "duration"
+	USER_ID                    ParamName = "userID"
+	CREATE_TIME                ParamName = "createTime"
+	WEB_VOICE_CONF             ParamName = "webVoiceConf"
+	PUBLISH                    ParamName = "publish"
+	REDIRECT                   ParamName = "redirect"
+	CLIENT_URL                 ParamName = "clientURL"
+	CONFIG_TOKEN               ParamName = "configToken"
+	AVATAR_URL                 ParamName = "avatarURL"
+	MODERATOR_ONLY_MESSAGE     ParamName = "moderatorOnlyMessage"
 )
 
 type Params struct {
@@ -127,13 +127,13 @@ func (api *ApiRequest) buildParams(params ...params) string {
 
 		//Replace special chars
 		name := url.QueryEscape(string(p.name))
-		value := url.QueryEscape(p.value)
+		Value := url.QueryEscape(p.Value)
 
 		if count == 0 {
-			param = name + string("=") + value
+			param = name + string("=") + Value
 			continue
 		}
-		param = param + string("&") + name + string("=") + value
+		param = param + string("&") + name + string("=") + Value
 	}
 
 	//Replace some chars with origanal char
