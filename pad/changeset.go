@@ -11,7 +11,7 @@ import (
 	"syscall"
 	"time"
 
-	ch "github.com/bigbluebutton-bot/bigbluebutton-bot/pad/changesetproto"
+	ch "github.com/CharfedinIssawi/bigbluebutton-bot/pad/changesetproto"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
