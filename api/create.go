@@ -29,7 +29,7 @@ type responseCreateMeeting struct {
 // Makes a http get request to the BigBlueButton API, creates a meeting and returns this new meeting
 func (api *ApiRequest) CreateMeeting(name string, meetingID string, attendeePW string, moderatorPW string, welcome string, allowStartStopRecording bool, autoStartRecording bool, record bool, voiceBridge int64) (Meeting, error) {
 
-	params := []params{
+	Params := []Params{
 		{
 			name:  ALLOW_START_STOP_RECORDING,
 			value: strconv.FormatBool(allowStartStopRecording),
